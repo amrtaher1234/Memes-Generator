@@ -30,13 +30,14 @@ class App extends Component {
     let columnArray = [];
     this.state.memes.map((val , index) => {
       
-      imagesArray.push(<Image className="img" src = {val.url} key = {index}  />)
+      imagesArray.push(<Image  className="img" src = {val.url} key = {index}  />)
       if (index % 5 == 0) {
         columnArray.push(<div className="column">{imagesArray}</div>)
         imagesArray = [];
       }
     })
-    columnArray.push(<div className="column">{imagesArray}</div>);
+    // removing the first element to make the grid
+    // look better. try it without splicing to see the difference.
     return columnArray.splice(1);
   }
   render() {
