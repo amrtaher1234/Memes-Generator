@@ -32,7 +32,7 @@ class App extends Component {
       
       imagesArray.push(<Image  className="img" src = {val.url} key = {index}  />)
       if (index % 5 == 0) {
-        columnArray.push(<div className="column">{imagesArray}</div>)
+        columnArray.push(<div key = {index} className="column">{imagesArray}</div>)
         imagesArray = [];
       }
     })
