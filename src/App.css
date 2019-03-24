@@ -31,3 +31,42 @@
     transform: rotate(360deg);
   }
 }
+.flex  {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 15px;
+
+
+}
+.flex .child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-row: auto;
+  grid-column: auto;  
+}
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column .img {
+  /* border: 1px solid black; */
+  max-width: 100%;
+  margin-top: 3px;
+  vertical-align: middle;
+}
